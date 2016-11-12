@@ -21,7 +21,7 @@
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
             <Button
                 android:layout_width="0dp"
                 android:layout_height="25pt"
@@ -35,9 +35,34 @@
                 android:layout_width="0dp"
                 android:layout_height="25pt"
                 android:layout_weight="0.5"
-                android:text="Advanced sensor"
+                android:text="GPS"
                 android:textAlignment="center"
-                android:id="@+id/advancedSensorButton"
+                android:id="@+id/gpsButton"
+                android:onClick="goToGPSActivity"
+                android:gravity="center"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="25pt"
+                android:layout_weight="0.5"
+                android:text="Camera"
+                android:textAlignment="center"
+                android:id="@+id/cameraButton"
+                android:onClick="goToCameraActivity"
+                android:gravity="center"/>
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="25pt"
+                android:layout_weight="0.5"
+                android:text="Custom view"
+                android:textAlignment="center"
+                android:id="@+id/customViewButton"
+                android:onClick="goToGPSActivity"
                 android:gravity="center"/>
         </LinearLayout>
     </LinearLayout>

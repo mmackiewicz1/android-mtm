@@ -1,23 +1,15 @@
 package com.android_gpsstatus.multimedia.sub_activities;
 
-import android.graphics.Color;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.android_gpsstatus.multimedia.R;
-
-import java.util.Arrays;
-import java.util.List;
 
 public class SensorActivity extends AppCompatActivity implements SensorEventListener {
     private SensorManager sensorManager;
