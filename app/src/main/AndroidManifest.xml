@@ -25,7 +25,7 @@
         </activity>
         <activity android:name=".sub_activities.SensorActivity" />
         <activity android:name=".sub_activities.GPSActivity" />
-        <activity android:name=".sub_activities.CameraActivity"></activity>
+        <activity android:name=".sub_activities.CameraActivity" android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

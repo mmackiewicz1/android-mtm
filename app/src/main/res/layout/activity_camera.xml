@@ -14,15 +14,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <TextureView
-            android:id="@+id/texture"
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_height="wrap_content"
+            android:id="@+id/cameraLayout"
             android:layout_width="match_parent"
-            android:layout_height="400px"
-            android:layout_above="@+id/btn_takePicture"
-            android:layout_alignParentTop="true"/>
+            android:keepScreenOn="true">
+
+        </RelativeLayout>
 
         <TextView
-            android:text="Brightness"
+            android:text="Zoom"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAlignment="center"
@@ -33,8 +35,9 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/linearLayout"
             android:layout_centerHorizontal="true"
-            android:id="@+id/brightnessSeekBar"
-            android:progress="100"/>
+            android:id="@+id/zoomSeekBar"
+            android:progress="58"
+            android:max="58"/>
 
     </LinearLayout>
 
