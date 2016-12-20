@@ -1,4 +1,4 @@
-package com.android_gpsstatus.multimedia;
+package com.android_project.multimedia;
 
 import org.junit.Test;
 

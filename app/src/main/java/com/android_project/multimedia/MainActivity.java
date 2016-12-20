@@ -1,13 +1,14 @@
-package com.android_gpsstatus.multimedia;
+package com.android_project.multimedia;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import com.android_gpsstatus.multimedia.sub_activities.CameraActivity;
-import com.android_gpsstatus.multimedia.sub_activities.GPSActivity;
-import com.android_gpsstatus.multimedia.sub_activities.SensorActivity;
+import com.android_project.multimedia.sub_activities.CameraActivity;
+import com.android_project.multimedia.sub_activities.DrawActivity;
+import com.android_project.multimedia.sub_activities.GPSActivity;
+import com.android_project.multimedia.sub_activities.SensorActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,6 +30,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void goToCameraActivity(View view) {
         Intent intent = new Intent(this, CameraActivity.class);
+        startActivity(intent);
+    }
+
+    public void goToDrawActivity(View view) {
+        Intent intent = new Intent(this, DrawActivity.class);
         startActivity(intent);
     }
 }

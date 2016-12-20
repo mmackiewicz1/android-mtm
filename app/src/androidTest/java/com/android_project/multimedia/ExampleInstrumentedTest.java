@@ -1,4 +1,4 @@
-package com.android_gpsstatus.multimedia;
+package com.android_project.multimedia;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.android_gpsstatus.multimedia", appContext.getPackageName());
+        assertEquals("com.android_project.multimedia", appContext.getPackageName());
     }
 }

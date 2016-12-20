@@ -1,4 +1,4 @@
-package com.android_gpsstatus.multimedia.sub_activities;
+package com.android_project.multimedia.sub_activities;
 
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
@@ -9,7 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.TextView;
 
-import com.android_gpsstatus.multimedia.R;
+import com.android_project.multimedia.R;
 
 public class SensorActivity extends AppCompatActivity implements SensorEventListener {
     private SensorManager sensorManager;

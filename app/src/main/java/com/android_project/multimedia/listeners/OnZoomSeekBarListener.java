@@ -1,10 +1,10 @@
-package com.android_gpsstatus.multimedia.listeners;
+package com.android_project.multimedia.listeners;
 
 import android.hardware.Camera;
 import android.util.Log;
 import android.widget.SeekBar;
 
-import com.android_gpsstatus.multimedia.models.CameraPreview;
+import com.android_project.multimedia.models.CameraPreview;
 
 public class OnZoomSeekBarListener implements SeekBar.OnSeekBarChangeListener {
     private CameraPreview cameraPreview;

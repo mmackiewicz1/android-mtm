@@ -4,7 +4,7 @@ android {
     compileSdkVersion 22
     buildToolsVersion "24.0.3"
     defaultConfig {
-        applicationId "com.android_gpsstatus.multimedia"
+        applicationId "com.android_project.multimedia"
         minSdkVersion 16
         targetSdkVersion 22
         versionCode 1

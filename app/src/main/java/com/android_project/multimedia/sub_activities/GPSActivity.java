@@ -1,4 +1,4 @@
-package com.android_gpsstatus.multimedia.sub_activities;
+package com.android_project.multimedia.sub_activities;
 
 import android.content.Context;
 import android.location.Criteria;
@@ -9,8 +9,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
-import com.android_gpsstatus.multimedia.R;
-import com.android_gpsstatus.multimedia.listeners.GPSLocationListener;
+import com.android_project.multimedia.R;
+import com.android_project.multimedia.listeners.GPSLocationListener;
 
 import java.util.Locale;
 

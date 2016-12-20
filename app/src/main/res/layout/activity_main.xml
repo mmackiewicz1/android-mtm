@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.android_gpsstatus.multimedia.MainActivity">
+    tools:context="com.android_project.multimedia.MainActivity">
 
     <LinearLayout
         android:orientation="vertical"
@@ -17,7 +17,6 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
-
 
         <LinearLayout
             android:orientation="horizontal"
@@ -60,10 +59,10 @@
                 android:layout_width="0dp"
                 android:layout_height="25pt"
                 android:layout_weight="0.5"
-                android:text="Custom view"
+                android:text="Draw"
                 android:textAlignment="center"
-                android:id="@+id/customViewButton"
-                android:onClick="goToGPSActivity"
+                android:id="@+id/goToDrawActivity"
+                android:onClick="goToDrawActivity"
                 android:gravity="center"/>
         </LinearLayout>
     </LinearLayout>

@@ -1,4 +1,4 @@
-package com.android_gpsstatus.multimedia.listeners;
+package com.android_project.multimedia.listeners;
 
 import android.app.Service;
 import android.content.Intent;

@@ -1,4 +1,4 @@
-package com.android_gpsstatus.multimedia.models;
+package com.android_project.multimedia.models;
 import java.io.IOException;
 
 import android.content.Context;
@@ -38,7 +38,7 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
 
     public void surfaceChanged(SurfaceHolder holder, int format, int w, int h) {
         Camera.Parameters parameters = camera.getParameters();
-        Camera.Size previewSize = parameters.getSupportedPreviewSizes().get(6);
+        Camera.Size previewSize = parameters.getSupportedPreviewSizes().get(2);
 
         parameters.setPreviewSize(previewSize.width, previewSize.height);
         holder.setFixedSize(previewSize.height, previewSize.width);

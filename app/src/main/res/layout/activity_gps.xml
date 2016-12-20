@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.android_gpsstatus.multimedia.sub_activities.GPSActivity">
+    tools:context="com.android_project.multimedia.sub_activities.GPSActivity">
 
     <LinearLayout
         android:orientation="vertical"

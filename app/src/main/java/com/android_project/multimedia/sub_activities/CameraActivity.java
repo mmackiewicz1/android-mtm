@@ -1,13 +1,13 @@
-package com.android_gpsstatus.multimedia.sub_activities;
+package com.android_project.multimedia.sub_activities;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 
-import com.android_gpsstatus.multimedia.R;
-import com.android_gpsstatus.multimedia.listeners.OnZoomSeekBarListener;
-import com.android_gpsstatus.multimedia.models.CameraPreview;
+import com.android_project.multimedia.R;
+import com.android_project.multimedia.listeners.OnZoomSeekBarListener;
+import com.android_project.multimedia.models.CameraPreview;
 
 public class CameraActivity extends AppCompatActivity {
     private SeekBar zoomSeekBar;
