@@ -7,6 +7,9 @@ import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 
 public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback {
+    private static final int FIXED_ORIENTATION = 90;
+    private static final int CAMERA_INDEX = 2;
+
     private SurfaceHolder surfaceHolder;
     private Camera camera;
 
@@ -20,11 +23,10 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
 
     public void surfaceCreated(SurfaceHolder holder) {
         camera = Camera.open();
-        camera.setDisplayOrientation(90);
+        camera.setDisplayOrientation(FIXED_ORIENTATION);
 
         try {
             camera.setPreviewDisplay(holder);
-
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -38,7 +40,7 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
 
     public void surfaceChanged(SurfaceHolder holder, int format, int w, int h) {
         Camera.Parameters parameters = camera.getParameters();
-        Camera.Size previewSize = parameters.getSupportedPreviewSizes().get(2);
+        Camera.Size previewSize = parameters.getSupportedPreviewSizes().get(CAMERA_INDEX);
 
         parameters.setPreviewSize(previewSize.width, previewSize.height);
         holder.setFixedSize(previewSize.height, previewSize.width);

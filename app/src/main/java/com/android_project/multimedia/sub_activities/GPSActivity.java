@@ -2,17 +2,14 @@ package com.android_project.multimedia.sub_activities;
 
 import android.content.Context;
 import android.location.Criteria;
-import android.location.Geocoder;
 import android.location.LocationListener;
 import android.location.LocationManager;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
 import com.android_project.multimedia.R;
 import com.android_project.multimedia.listeners.GPSLocationListener;
-
-import java.util.Locale;
 
 public class GPSActivity extends AppCompatActivity {
     private LocationManager locationManager;

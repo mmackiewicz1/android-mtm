@@ -30,6 +30,8 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".sub_activities.DrawActivity">
         </activity>
+        <activity android:name=".sub_activities.WeatherTaskActivity">
+        </activity>
     </application>
 
 </manifest>

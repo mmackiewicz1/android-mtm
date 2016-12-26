@@ -13,8 +13,6 @@ import com.android_project.multimedia.R;
 
 public class SensorActivity extends AppCompatActivity implements SensorEventListener {
     private SensorManager sensorManager;
-    private boolean color = false;
-    private long lastUpdate;
 
     @Override
     public void onSensorChanged(SensorEvent event) {
@@ -42,7 +40,6 @@ public class SensorActivity extends AppCompatActivity implements SensorEventList
         setContentView(R.layout.activity_sensor);
 
         sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
-        lastUpdate = System.currentTimeMillis();
     }
 
     @Override
