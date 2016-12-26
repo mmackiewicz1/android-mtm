@@ -9,7 +9,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.android_project.multimedia.sub_activities.WeatherTaskActivity">
+    tools:context="com.android_project.multimedia.sub_activities.AsyncTaskActivity">
 
     <LinearLayout
         android:orientation="vertical"
@@ -28,12 +28,12 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight=".5"
-                android:text="Place"/>
+                android:text="User id:"/>
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/placeTextView"
+                android:id="@+id/userIdTextView"
                 android:layout_weight=".5"/>
         </LinearLayout>
 
@@ -46,12 +46,12 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight=".5"
-                android:text="Sky:"/>
+                android:text="Id:"/>
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/skyTextView"
+                android:id="@+id/idTextView"
                 android:layout_weight=".5"/>
         </LinearLayout>
 
@@ -64,12 +64,12 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight=".5"
-            android:text="Temperature:"/>
+            android:text="Title:"/>
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/temperatureTextView"
+                android:id="@+id/titleTextView"
                 android:layout_weight=".5"/>
         </LinearLayout>
 
@@ -82,48 +82,12 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight=".5"
-                android:text="Pressure:"/>
+                android:text="Body:"/>
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/pressureTextView"
-                android:layout_weight=".5"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".5"
-                android:text="Humidity:"/>
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/humidityTextView"
-                android:layout_weight=".5"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".5"
-                android:text="Wind speed:"/>
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/windSpeedTextView"
+                android:id="@+id/bodyTextView"
                 android:layout_weight=".5"/>
         </LinearLayout>
     </LinearLayout>

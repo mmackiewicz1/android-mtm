@@ -9,7 +9,7 @@ import com.android_project.multimedia.sub_activities.CameraActivity;
 import com.android_project.multimedia.sub_activities.DrawActivity;
 import com.android_project.multimedia.sub_activities.GPSActivity;
 import com.android_project.multimedia.sub_activities.SensorActivity;
-import com.android_project.multimedia.sub_activities.WeatherTaskActivity;
+import com.android_project.multimedia.sub_activities.AsyncTaskActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void goToWeatherTaskActivity(View view) {
-        Intent intent = new Intent(this, WeatherTaskActivity.class);
+        Intent intent = new Intent(this, AsyncTaskActivity.class);
         startActivity(intent);
     }
 

@@ -30,7 +30,7 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".sub_activities.DrawActivity">
         </activity>
-        <activity android:name=".sub_activities.WeatherTaskActivity">
+        <activity android:name=".sub_activities.AsyncTaskActivity">
         </activity>
     </application>
 
