@@ -74,7 +74,7 @@
                 android:layout_width="0dp"
                 android:layout_height="25pt"
                 android:layout_weight="0.5"
-                android:text="Weather"
+                android:text="Image download"
                 android:textAlignment="center"
                 android:id="@+id/weatherTaskButton"
                 android:onClick="goToWeatherTaskActivity"

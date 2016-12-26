@@ -2,55 +2,57 @@ package com.android_project.multimedia.tasks;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
+import android.widget.ImageView;
 
-import com.android_project.multimedia.reponses.AsyncResponse;
-import com.fasterxml.jackson.databind.ObjectMapper;
-
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import java.net.URL;
 
-public class AsyncRequestTask extends AsyncTask<URL, Integer, AsyncResponse> {
-    private static final String REQUEST_URL = "http://jsonplaceholder.typicode.com/posts/1";
-    private static final int BUFFER_SIZE = 32;
+public class AsyncRequestTask extends AsyncTask<String, Void, Bitmap> {
+    private static final String REQUEST_URL = "https://i.imgsafe.org/1857455bd9.jpg";
 
+    private ImageView imageView;
     private ProgressDialog progressDialog;
 
-    public AsyncRequestTask(Activity activity) {
-        progressDialog = new ProgressDialog(activity);
-    }
-
-    @Override
-    protected AsyncResponse doInBackground(URL... params) {
-        try {
-            BufferedReader reader = new BufferedReader(new InputStreamReader((new URL(REQUEST_URL).openConnection()).getInputStream()));
-
-            StringBuffer jsonData = new StringBuffer(BUFFER_SIZE);
-            String temp;
-            while ((temp = reader.readLine()) != null) {
-                jsonData.append(temp).append("\n");
-            }
-
-            reader.close();
-
-            return new ObjectMapper().readValue(jsonData.toString(), AsyncResponse.class);
-        } catch(Exception e){
-            return null;
+    public AsyncRequestTask(ImageView imageView, Activity activity) {
+        this.imageView = imageView;
+        if (progressDialog == null) {
+            progressDialog = new ProgressDialog(activity);
         }
     }
 
+    @Override
+    protected Bitmap doInBackground(String... params) {
+        Bitmap bitmap;
+        try {
+            bitmap = BitmapFactory.decodeStream(new URL(REQUEST_URL).openStream());
+        } catch(Exception e){
+            throw new RuntimeException(e);
+        }
+
+        return bitmap;
+    }
+
+    @Override
     protected void onPreExecute() {
-        progressDialog.setMessage("Ładowanie danych REST.");
+        super.onPreExecute();
+
+        progressDialog.setMessage("Ładowanie danych obrazu.");
         progressDialog.setIndeterminate(true);
         progressDialog.show();
     }
 
     @Override
-    protected void onPostExecute(AsyncResponse result) {
+    protected void onPostExecute(Bitmap result) {
         super.onPostExecute(result);
+
         if (progressDialog.isShowing()) {
             progressDialog.dismiss();
+        }
+
+        if (result != null) {
+            imageView.setImageBitmap(result);
         }
     }
 }
