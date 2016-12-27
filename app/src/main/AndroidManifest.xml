@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.android_project.multimedia">
 
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true"/>
+
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <uses-permission android:name="android.permission.INTERNET"/>
@@ -31,6 +35,10 @@
         <activity android:name=".sub_activities.DrawActivity">
         </activity>
         <activity android:name=".sub_activities.AsyncTaskActivity">
+        </activity>
+        <activity android:name=".sub_activities.OpenGLActivity">
+        </activity>
+        <activity android:name=".sub_activities.CameraOpenCVActivity">
         </activity>
     </application>
 

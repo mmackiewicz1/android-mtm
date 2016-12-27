@@ -69,16 +69,46 @@
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_gravity="top">
+
             <Button
                 android:layout_width="0dp"
                 android:layout_height="25pt"
                 android:layout_weight="0.5"
                 android:text="Image download"
                 android:textAlignment="center"
-                android:id="@+id/weatherTaskButton"
-                android:onClick="goToWeatherTaskActivity"
+                android:id="@+id/asyncTaskButton"
+                android:onClick="goToAsyncTaskActivity"
                 android:gravity="center"/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="25pt"
+                android:layout_weight="0.5"
+                android:text="3D image"
+                android:textAlignment="center"
+                android:id="@+id/OpenGLImageTaskButton"
+                android:onClick="goToOpenGLTaskActivity"
+                android:gravity="center"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="25pt"
+                android:layout_weight="0.5"
+                android:text="Image download"
+                android:textAlignment="center"
+                android:id="@+id/openCVButton"
+                android:onClick="goToOpenCVActivity"
+                android:gravity="center"/>
+
         </LinearLayout>
     </LinearLayout>
 </RelativeLayout>

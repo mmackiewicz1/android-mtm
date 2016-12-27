@@ -6,8 +6,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.android_project.multimedia.sub_activities.CameraActivity;
+import com.android_project.multimedia.sub_activities.CameraOpenCVActivity;
 import com.android_project.multimedia.sub_activities.DrawActivity;
 import com.android_project.multimedia.sub_activities.GPSActivity;
+import com.android_project.multimedia.sub_activities.OpenGLActivity;
 import com.android_project.multimedia.sub_activities.SensorActivity;
 import com.android_project.multimedia.sub_activities.AsyncTaskActivity;
 
@@ -33,8 +35,18 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void goToWeatherTaskActivity(View view) {
+    public void goToAsyncTaskActivity(View view) {
         Intent intent = new Intent(this, AsyncTaskActivity.class);
+        startActivity(intent);
+    }
+
+    public void goToOpenGLTaskActivity(View view) {
+        Intent intent = new Intent(this, OpenGLActivity.class);
+        startActivity(intent);
+    }
+
+    public void goToOpenCVActivity(View view) {
+        Intent intent = new Intent(this, CameraOpenCVActivity.class);
         startActivity(intent);
     }
 
