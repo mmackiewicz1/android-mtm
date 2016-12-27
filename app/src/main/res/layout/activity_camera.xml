@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_camera"
@@ -9,23 +10,22 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.android_project.multimedia.sub_activities.CameraActivity">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/ScrollView01"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                android:scrollbars="none" >
+
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <RelativeLayout
-            xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_height="wrap_content"
-            android:id="@+id/cameraLayout"
-            android:layout_width="match_parent"
-            android:keepScreenOn="true">
-
-        </RelativeLayout>
+        android:layout_height="match_parent">
 
         <TextView
             android:text="Zoom"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAlignment="center"
             android:layout_marginTop="10pt"/>
@@ -36,9 +36,18 @@
             android:layout_below="@+id/linearLayout"
             android:layout_centerHorizontal="true"
             android:id="@+id/zoomSeekBar"
-            android:progress="58"
+            android:progress="0"
             android:max="58"/>
 
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/cameraLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:keepScreenOn="true">
+        </RelativeLayout>
     </LinearLayout>
+
+    </ScrollView>
 
 </RelativeLayout>
