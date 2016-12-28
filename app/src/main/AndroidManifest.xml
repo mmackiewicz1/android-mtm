@@ -38,7 +38,8 @@
         </activity>
         <activity android:name=".sub_activities.OpenGLActivity">
         </activity>
-        <activity android:name=".sub_activities.CameraOpenCVActivity">
+        <activity android:name=".sub_activities.CameraOpenCVActivity"
+                  android:screenOrientation="landscape">
         </activity>
     </application>
 

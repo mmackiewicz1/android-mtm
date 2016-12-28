@@ -103,7 +103,7 @@
                 android:layout_width="0dp"
                 android:layout_height="25pt"
                 android:layout_weight="0.5"
-                android:text="Image download"
+                android:text="OpenCV camera view"
                 android:textAlignment="center"
                 android:id="@+id/openCVButton"
                 android:onClick="goToOpenCVActivity"

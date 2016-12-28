@@ -2,6 +2,7 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:opencv="http://schemas.android.com/apk/res-auto"
     android:id="@+id/activity_camera_open_cv"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,5 +11,18 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.android_project.multimedia.sub_activities.CameraOpenCVActivity">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <org.opencv.android.JavaCameraView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/openCVCameraView"
+            opencv:show_fps="true"
+            opencv:camera_id="any"
+            android:visibility="gone"/>
+    </LinearLayout>
 
 </RelativeLayout>
