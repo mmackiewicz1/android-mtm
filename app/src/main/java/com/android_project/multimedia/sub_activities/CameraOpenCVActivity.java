@@ -12,22 +12,24 @@ import org.opencv.android.CameraBridgeViewBase;
 import org.opencv.android.LoaderCallbackInterface;
 import org.opencv.android.OpenCVLoader;
 import org.opencv.core.Mat;
-import org.opencv.core.Size;
 import org.opencv.imgproc.Imgproc;
 
 public class CameraOpenCVActivity extends AppCompatActivity implements CameraBridgeViewBase.CvCameraViewListener2 {
     private CameraBridgeViewBase cameraBridgeView;
 
-    private BaseLoaderCallback mLoaderCallback = new BaseLoaderCallback(this) {
+    private BaseLoaderCallback baseLoaderCallback = new BaseLoaderCallback(this) {
         @Override
         public void onManagerConnected(int status) {
             switch (status) {
                 case LoaderCallbackInterface.SUCCESS: {
                     cameraBridgeView.enableView();
-                } break;
+                }
+                break;
+
                 default: {
                     super.onManagerConnected(status);
-                } break;
+                }
+                break;
             }
         }
     };
@@ -53,12 +55,12 @@ public class CameraOpenCVActivity extends AppCompatActivity implements CameraBri
 
     @Override
     public Mat onCameraFrame(CameraBridgeViewBase.CvCameraViewFrame inputFrame) {
-        Mat mat = inputFrame.rgba();
-        Mat grayscaledMat = new Mat();
-        Imgproc.cvtColor(mat, grayscaledMat, Imgproc.COLOR_BGR2GRAY);
+        Mat inputFrameRGBA = inputFrame.rgba();
+        Mat grayScaledMat = new Mat();
+        Imgproc.cvtColor(inputFrameRGBA, grayScaledMat, Imgproc.COLOR_BGR2GRAY);
 
         Mat thresh = new Mat();
-        Imgproc.threshold(grayscaledMat, thresh, 30, 255, Imgproc.THRESH_BINARY_INV);
+        Imgproc.threshold(grayScaledMat, thresh, 30, 255, Imgproc.THRESH_BINARY_INV);
 
         return thresh;
     }
@@ -66,7 +68,7 @@ public class CameraOpenCVActivity extends AppCompatActivity implements CameraBri
     @Override
     public void onResume() {
         super.onResume();
-        OpenCVLoader.initAsync(OpenCVLoader.OPENCV_VERSION_2_4_9, this, mLoaderCallback);
+        OpenCVLoader.initAsync(OpenCVLoader.OPENCV_VERSION_2_4_9, this, baseLoaderCallback);
     }
 
     @Override

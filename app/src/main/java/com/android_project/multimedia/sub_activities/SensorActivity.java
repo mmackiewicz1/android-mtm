@@ -10,9 +10,11 @@ import android.util.Log;
 import android.widget.TextView;
 
 import com.android_project.multimedia.R;
+import com.android_project.multimedia.processors.SensorDataProcessor;
 
 public class SensorActivity extends AppCompatActivity implements SensorEventListener {
     private SensorManager sensorManager;
+    private SensorDataProcessor sensorDataProcessor;
 
     @Override
     public void onSensorChanged(SensorEvent event) {
@@ -40,6 +42,10 @@ public class SensorActivity extends AppCompatActivity implements SensorEventList
         setContentView(R.layout.activity_sensor);
 
         sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
+        sensorDataProcessor = new SensorDataProcessor(
+                (TextView)findViewById(R.id.sideOrientationTextView),
+                (TextView)findViewById(R.id.groundOrientationTextView)
+        );
     }
 
     @Override
@@ -52,5 +58,7 @@ public class SensorActivity extends AppCompatActivity implements SensorEventList
         ((TextView)findViewById(R.id.xTextView)).setText(String.valueOf(event.values[0]));
         ((TextView)findViewById(R.id.yTextView)).setText(String.valueOf(event.values[1]));
         ((TextView)findViewById(R.id.zTextView)).setText(String.valueOf(event.values[2]));
+
+        sensorDataProcessor.changePhonePositionText(event.values);
     }
 }

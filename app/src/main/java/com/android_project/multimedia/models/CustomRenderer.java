@@ -55,7 +55,7 @@ public class CustomRenderer implements GLSurfaceView.Renderer {
         gl.glTranslatef(0f, 0.0f, -6.0f);
         gl.glScalef(0.9f, 0.9f, 0.9f);
         gl.glRotatef(ANGLE, 2.0f, 2.0f, 2.0f);
-        colorfulCube.draw(gl);
+        colorfulCube.renderCube(gl);
         ANGLE += SPEED;
     }
 }

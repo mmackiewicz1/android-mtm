@@ -3,6 +3,7 @@ package com.android_project.multimedia.models;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.FloatBuffer;
+
 import javax.microedition.khronos.opengles.GL10;
 
 public class ColorfulCube {
@@ -55,7 +56,7 @@ public class ColorfulCube {
         floatBuffer.position(0);
     }
 
-    public void draw(GL10 gl) {
+    public void renderCube(GL10 gl) {
         gl.glFrontFace(GL10.GL_CCW);
         gl.glEnable(GL10.GL_CULL_FACE);
         gl.glCullFace(GL10.GL_BACK);
@@ -64,7 +65,7 @@ public class ColorfulCube {
 
         for (int i = 0; i < FACES_NUMBER; i++) {
             gl.glColor4f(colors[i][0], colors[i][1], colors[i][2], colors[i][3]);
-            gl.glDrawArrays(GL10.GL_TRIANGLE_STRIP, i*4, 4);
+            gl.glDrawArrays(GL10.GL_TRIANGLE_STRIP, i * 4, 4);
         }
 
         gl.glDisableClientState(GL10.GL_VERTEX_ARRAY);

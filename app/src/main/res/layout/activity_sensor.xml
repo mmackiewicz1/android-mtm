@@ -70,5 +70,59 @@
                 android:id="@+id/zTextView"
                 android:layout_weight=".7" />
         </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Obrót w na lewy/prawy bok: "
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".3" />
+            <TextView
+                android:text=""
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/sideOrientationTextView"
+                android:layout_weight=".7" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Obrót w góre/dół: "
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".3" />
+            <TextView
+                android:text=""
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/groundOrientationTextView"
+                android:layout_weight=".7" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Obrót w lewo/prawo: "
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".3" />
+            <TextView
+                android:text=""
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/rolTextView"
+                android:layout_weight=".7" />
+        </LinearLayout>
     </LinearLayout>
 </RelativeLayout>
